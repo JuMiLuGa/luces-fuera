@@ -1,23 +1,23 @@
 import java.util.*;
 
 public class LucesFuera {
-  private boolean[][] tablero;
+  private boolean[][] matriz;
   private int tamaño;
 
   public LucesFuera(int tamaño) {
     this.tamaño = tamaño;
-    this.tablero = new boolean[tamaño][tamaño];
+    this.matriz = new boolean[tamaño][tamaño];
   }
 
-  public void rellenarAleatorio() {
+  public void rellenarMatriz() {
 
   }
 
-  public void imprimirTablero() {
+  public void imprimirMatriz() {
  
   }
 
-  public boolean TodasApagadas() {
+  public boolean comprobarVictoria() {
     
   }
 
@@ -28,11 +28,17 @@ public class LucesFuera {
 
 
   public static void main(String[] args) {
-    Scanner entrada = new Scanner(System.in);
-    System.out.println("Define el tamaño del tablero: ");
-    int tamaño = entrada.nextInt();
-
-    LucesFuera lucesFuera = new LucesFuera(tamaño);
-    lucesFuera.rellenarMatriz();
-
+    Scanner input = new Scanner(System.in);
+    System.out.print("Introduce el tamaño de la matriz: ");
+    int tamaño = input.nextInt();
+    LucesFora lucesFora = new LucesFora(tamaño);
+    lucesFora.rellenarMatriz();
+    while (!lucesFora.comprobarVictoria()) {
+      lucesFora.imprimirMatriz();
+      System.out.print("Introduce la fila y columna (1-" + tamaño + "): ");
+      int fila = input.nextInt() - 1;
+      int columna = input.nextInt() - 1;
+      lucesFora.flipLights(fila, columna);
+    }
+    System.out.println("Has ganado!");
 }
