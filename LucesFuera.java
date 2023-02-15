@@ -31,14 +31,15 @@ public class LucesFuera {
     Scanner input = new Scanner(System.in);
     System.out.print("Introduce el tamaño de la matriz: ");
     int tamaño = input.nextInt();
-    LucesFora lucesFora = new LucesFora(tamaño);
+    LucesFuera lucesFora = new LucesFuera(tamaño);
     lucesFora.rellenarMatriz();
     while (!lucesFora.comprobarVictoria()) {
       lucesFora.imprimirMatriz();
       System.out.print("Introduce la fila y columna (1-" + tamaño + "): ");
       int fila = input.nextInt() - 1;
       int columna = input.nextInt() - 1;
-      lucesFora.flipLights(fila, columna);
+      lucesFora.invertirPosiciones(fila, columna);
     }
     System.out.println("Has ganado!");
+  }
 }
