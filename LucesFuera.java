@@ -14,7 +14,17 @@ public class LucesFuera {
   }
 
   public void imprimirMatriz() {
- 
+    System.out.println();
+      for (int i = 0; i < tamaño; i++) {
+        for (int j = 0; j < tamaño; j++) {
+          if (matriz[i][j]) {
+            System.out.print("O ");
+          } else {
+            System.out.print("X ");
+          }
+        }
+        System.out.println();
+      }
   }
 
   public boolean comprobarVictoria() {
