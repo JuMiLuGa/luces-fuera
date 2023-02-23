@@ -10,7 +10,12 @@ public class LucesFuera {
   }
 
   public void rellenarMatriz() {
-
+    Random random = new Random();
+    for (int i = 0; i < tamaño; i++) {
+        for (int j = 0; j < tamaño; j++) {
+            matriz[i][j] = random.nextBoolean();
+        }
+    }
   }
 
   public void imprimirMatriz() {
