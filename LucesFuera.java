@@ -33,7 +33,14 @@ public class LucesFuera {
   }
 
   public boolean comprobarVictoria() {
-    
+    for (int i = 0; i < tamaño; i++) {
+            for (int j = 0; j < tamaño; j++) {
+                if (matriz[i][j]) {
+                    return false;
+                }
+            }
+        }
+        return true;
   }
 
   public void invertirPosiciones(int x, int y) {
