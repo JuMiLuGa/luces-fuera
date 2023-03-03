@@ -43,7 +43,7 @@ public class LucesFuera {
         return true;
   }
 
-  public void invertirPosiciones(int x, int y) {
+  public void invertirPosiciones(int fila, int columna) {
     if (fila >= 0 && fila < tamaño && columna >= 0 && columna < tamaño) {
       matriz[fila][columna] = !matriz[fila][columna];
       if (fila > 0) {
